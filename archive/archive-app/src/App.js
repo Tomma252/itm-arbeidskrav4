@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Layout from './Layouts/Layouts.js';
 import Bookcards from './Layouts/Bookcards.js';
 import SearchResults from './Layouts/SearchResults.js';
 import axios from 'axios';
+import './App.css'
 
 const App = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -37,11 +39,12 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Search for Books</h1>
+    <Layout>
+      <div className="App">
       <Bookcards onSearch={handleSearch} />
       <SearchResults results={searchResults} />
-    </div>
+      </div>
+    </Layout>
   )
 }
 

@@ -13,7 +13,7 @@ const Bookcards = ({ onSearch }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="searchBar" onSubmit={handleSubmit}>
             <input
             type="text"
             placeholder="Search..."

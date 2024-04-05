@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SearchBar from './Layouts/Bookcards.js';
-import SearchResultList from './Layouts/SearchResults.js';
+import Bookcards from './Layouts/Bookcards.js';
+import SearchResults from './Layouts/SearchResults.js';
 import axios from 'axios';
 
 const App = () => {
@@ -39,8 +39,8 @@ const App = () => {
   return (
     <div className="App">
       <h1>Search for Books</h1>
-      <SearchBar onSearch={handleSearch} />
-      <SearchResultList results={searchResults} />
+      <Bookcards onSearch={handleSearch} />
+      <SearchResults results={searchResults} />
     </div>
   )
 }
